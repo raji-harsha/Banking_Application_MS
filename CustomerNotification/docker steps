@@ -1,0 +1,74 @@
+upload the jar file of ur project and the Dockerfile
+to check files are uploaded or not 
+$ls
+once the file are uploaded then build command to build change
+$docker build --help
+$docker build . -t hello-app:v1
+here v1 is the tag name and hello-app is the image name
+to get the images
+$docker images
+once the hello-app image is available we can run it
+$docker run --name hello-container -d -p 8082:8080 hello-app
+--name to give name to container, -d to run in detach or background,
+ -p to publish the port, 8082 is host port and 8080 is application/container port
+ 
+ to tag image from local to remote repo
+docker tag local-image:tagname new-repo:tagname
+$docker tag hello-app:v1 hello-remote:v1
+ this will show local and remote image
+$docker images
+to push image on docker hub repository first login to docker
+$docker login
+$docker push hello-remote:v1 
+then u can check on the docker hub
+
+------------------------------------------------------------
+
+docker compose-
+
+if the image is already there on docker hub the, use the image: repo name:tag name
+other wise build: . 
+in the docker-compose yaml file(mark the dot in build command)
+, as we are using environment variable file, so u need the env variable, 
+docker compose.yaml file,  mandatory, if image is already present otherwise
+ add jar file of project and Dockerfile if image is not built
+ upload the files
+ $ls
+ $docker compose up --help
+ 
+ to build the image with docker compose
+ $docker compose build . -t hello-app:v1
+ $docker compose --env-file env_variable.env up  -d 
+ 
+ if image already present
+ $docker compose up -d
+ 
+ if env file is used
+ $docker compose --env-file /temp/env-data.env up -d
+ 
+ $ docker images
+ images for ur services will be avaialble
+ $docker ps
+ container for all servcies will be running
+ 
+ to go inside any running container and run some command
+ $docker exec -it name-of-container bin/bash
+ this command works only with running container
+ 
+ 
+ 
+ mysql image running
+ $docker run --name mysql-container -d -e MYSQL_ROOT_PASSWORD=root mysql
+ $docker ps
+ if mysql container is running the
+ $docker exec -it mysql-container bin/bash
+ 
+ then inside bash mode
+ $mysql -p
+  provides root as password which we set
+  $ show databases;
+  or follow mysql queries;
+ 
+ 
+ 
+ 

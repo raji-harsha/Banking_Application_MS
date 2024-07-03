@@ -1,0 +1,20 @@
+
+
+java:S22592"EA "NullPointerException" could be thrown; "account" is nullable here.( šÊ÷úÿÿÿÿ8‘Š• ‡2J$3ea8ad44-4a9a-45c2-8cd7-ef140baa313f
+ˆ
+java:S2259*"EA "NullPointerException" could be thrown; "account" is nullable here.(şçÄç8Š• ‡2J$3262a3ba-68bb-4c48-aedf-9b5ef4693c15
+ˆ	java:S1124"FDefine and throw a dedicated exception instead of using a generic one.(Ôİ‘œ8¿ÄÃ‡2J$24f1c0c7-c90e-4303-84b4-b7adc2c05cd7
+¨
+java:S1192)"`Define a constant instead of duplicating this literal "http://ACCOUNT-SERVICE/account/" 4 times.(‰ê‰èüÿÿÿÿ8ÀÄÃ‡2J$efba7f94-8871-4cb7-9435-ed5ce861a95a
+§
+java:S1192,"dDefine a constant instead of duplicating this literal "http://ACCOUNT-SERVICE/account/save" 5 times.(––‡°8ÑÈÅ‡2J$d331eea2-198f-4349-965f-8e802b35adb4
+…
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ÃÄÃ‡2J$56b391b7-47a8-45f0-a394-d09d0535befb
+…
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ÃÄÃ‡2J$197b3f3e-0cdc-4cef-a9fe-76a7c368d4e5
+_
+java:S1116H"Remove this empty statement.(é…é¯8ŠûÅ‡2J$74d24d5f-46f2-4ffd-985a-598ee73d26d1
+d
+java:S1116J"Remove this empty statement.(«ù£ÿøÿÿÿÿ8†ÜÆ‡2J$961dc462-7f03-4050-8254-7926a7abb314
+d
+java:S1116\"Remove this empty statement.(¸Ã—ûÿÿÿÿ8ş ™ ‡2J$431b45f5-194d-4f01-9742-ffe49fe0732c

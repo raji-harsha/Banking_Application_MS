@@ -1,0 +1,38 @@
+version: "3.7"
+services:
+  mysqldb:
+# image: mysql:8.0  
+    image: ${image}
+    container_name: db-container
+    restart: unless-stopped
+    env_file: env_variable.env
+    environment: 
+      - MYSQL_ROOT_PASSWORD=${root_pwd}
+      - MYSQL_USER=snehal
+      - MYSQL_PASSWORD=snehal
+      - MYSQL_DATABASE=testdb
+    ports:
+      - 3306:3306
+    volumes:
+      - db:/var/lib/mysql
+  app:
+    depends_on:
+      - mysqldb
+    container_name: app-container
+    #build: .
+    image: snehal1672/fs:multiapp
+    restart: on-failure
+    ports:
+      - 8080:8080
+    environment: 
+      SPRING_APPLICATION_JSON: '{
+          "spring.datasource.url" : "jdbc:mysql://mysqldb:3306/testdb?allowPublicKeyRetrieval=true&useSSL=false",
+          "spring.datasource.username" : "snehal",
+          "spring.datasource.password" : "snehal",
+          "spring.jpa.properties.hibernate.dialect" : "org.hibernate.dialect.MySQL8Dialect",
+          "spring.jpa.hibernate.ddl-auto": "create"
+        }'      
+volumes:
+  db:
+      
+          

@@ -1,0 +1,12 @@
+
+L
+java:S1153""1Directly append the argument of String.valueOf().(áÔŒÈüÿÿÿÿ
+G
+java:S1153("1Directly append the argument of String.valueOf().(éóÃ—
+J
+java:S3740"/Provide the parametrized type for this generic.(Ä·Å‰üÿÿÿÿ
+q	java:S116"WRename this field "URI_EMPLOYEE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬Œé›üÿÿÿÿ
+<
+java:S1170"!Make this final field static too.(¬Œé›üÿÿÿÿ
+X
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ
